@@ -54,10 +54,13 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/about') }}">เกี่ยวกับเรา</a></li>
+                        <li><a href="{{ route('books') }}">หนังสือ</a></li>
+                        <li><a href="{{ route('typebooks') }}">ประเภทหนังสือ</a></li>
+                        <li><a href="{{ route('about') }}">เกี่ยวกับเรา</a></li>
                         <li><a href="{{ url('/login') }}">เข้าระบบ</a></li>
                         <li><a href="{{ url('/register') }}">ลงทะเบียน</a></li>
                     @else
+                        
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
